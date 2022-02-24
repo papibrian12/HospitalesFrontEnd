@@ -45,4 +45,17 @@ export class ListarComponent implements OnInit {
     })
   }
 
+
+  crearHospital(): void {
+    let hospital: Hospitales = new Hospitales();
+    hospital = this.hospitalrForm.value;
+    console.log(hospital)
+    this.servicio.crearHospital(hospital).subscribe(resp => {
+      console.log(resp)
+      console.log("creado")
+    }, error => {
+      console.log(error)
+    })
+  }
+
 }

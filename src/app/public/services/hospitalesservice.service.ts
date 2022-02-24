@@ -19,4 +19,9 @@ export class HospitalesserviceService {
     // http://localhost:8084/api/vi/hospital/eliminar/{id}
    }
 
+   //http://localhost:8084/api/v1/hospitales/hospital/crear
+   crearHospital(hospital: Hospitales): Observable<Hospitales>{
+     return this.httpClient.post<Hospitales>(`http://localhost:8084/api/v1/hospitales/hospital/crear`, hospital);
+   }
+
 }

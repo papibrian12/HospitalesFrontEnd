@@ -33,6 +33,9 @@ export class ListarComponent implements OnInit {
     this.hospitales = resultado;
     } );
   }
+  mostrarFormulario(): void {
+    console.log(JSON.stringify(this.hospitalrForm.value))
+  }
 
   eliminarHospital(id: number): void{
     this.servicio.eliminarHospital(id).subscribe(resp => {
